@@ -1,33 +1,34 @@
 import React from 'react'
 import Categories from './Categories';
-import { MenuTitle, Underline, MenuH2 } from './MenuElements';
+// import './template.css';
+import { MenuTitle, Underline, MenuH2, MenuWrapper, ItemHead, ItemText, ItemTitle, ItemTitleP, MenuWrapperCenter, MenuArticle, ItemImg } from './MenuElements';
 
 const MenuMain = ({ items, categories, filterItems }) => {
     return (
-        <section className="menu section">
+        <MenuWrapper>
             <MenuTitle>
                 <MenuH2>Our Menu</MenuH2>
                 <Underline></Underline>
             </MenuTitle>
             <Categories categories={categories} filterItems={filterItems} />
-            <div className='section-center'>
+            <MenuWrapperCenter>
                 {items.map((menuItem) => {
                     const { id, title, img, desc, price } = menuItem;
                     return (
-                        <article key={id} className='menu-item'>
-                            <img src={img} alt={title} className='photo' />
-                            <div className='item-info'>
-                                <header>
-                                    <h4>{title}</h4>
-                                    <h4 className='price'>${price}</h4>
-                                </header>
-                                <p className='item-text'>{desc}</p>
+                        <MenuArticle key={id}>
+                            <ItemImg src={img} alt={title}/>
+                            <div>
+                                <ItemHead>
+                                    <ItemTitle>{title}</ItemTitle>
+                                    <ItemTitleP className='price'>${price}</ItemTitleP>
+                                </ItemHead>
+                                <ItemText>{desc}</ItemText>
                             </div>
-                        </article>
+                        </MenuArticle>
                     );
                 })}
-            </div>
-        </section>
+            </MenuWrapperCenter>
+        </MenuWrapper>
     )
 }
 

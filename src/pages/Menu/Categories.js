@@ -1,22 +1,19 @@
-import React from 'react'
+import React from 'react';
+import {BtnWrapper, CategoryBtn} from './CategoryElements';
 
 const Categories = ({ categories, filterItems }) => {
     return (
-    <div className="btn-container">
-      {categories.map((category, index) => {
-        return (
-          <button
-            type="button"
-            className="filter-btn"
-            key={index}
-            onClick={() => filterItems(category)}
-          >
-            {category}
-          </button>
-        );
-      })}
-    </div>
-    )
-}
+        <BtnWrapper>
+            {categories.map((category, index) => {
+                return (
+                    <CategoryBtn type="button" key={index}
+                    onClick={() => filterItems(category)}>
+                    {category}
+                    </CategoryBtn>
+                );
+            })}
+        </BtnWrapper>
+    );
+};
 
 export default Categories

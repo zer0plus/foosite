@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import Home from '../index'
 import items from './MockData';
 import MenuMain from './MenuMain';
-const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 
 const Menu = () => {
+    const allCategories = ['all', ...new Set(items.map((item) => item.category))];
     const [menuItems, setMenuItems] = useState(items);
     const [categories, setCategories] = useState(allCategories);
 

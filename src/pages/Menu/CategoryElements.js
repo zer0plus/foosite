@@ -14,13 +14,13 @@ export const CategoryBtn = styled.button `
     margin: 0 0.5rem;
     letter-spacing: 1px;
     padding: 0.375rem 0.75rem;
-    color: #c59d5f;
+    color: hsl(125, 60%, 30%);
     cursor: pointer;
     transition: all 0.3s linear;
     border-radius: 0.25rem;
 
     &:hover {
-        background: #c59d5f;
+        background: hsl(125, 60%, 30%);
         color: #fff;
     }
 `;

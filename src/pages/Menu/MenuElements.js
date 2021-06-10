@@ -20,7 +20,7 @@ export const MenuH2 = styled.h2 `
 export const Underline = styled.div `
     width: 5rem;
     height: 0.25rem;
-    background: #c59d5f;
+    background: hsl(125, 60%, 30%);
     margin-left: auto;
     margin-right: auto;
 ` ;
@@ -29,7 +29,7 @@ export const MenuWrapper = styled.section `
     width: 90vw;
     margin: 0 auto;
     max-width: 1170px;
-    padding: 5rem 0;
+    padding: 4.5rem 0;
 
     @media screen and (min-width: 992px){
         width: 95vw;
@@ -66,7 +66,7 @@ export const ItemImg = styled.img `
     object-fit: cover;
     height: 200px;
     width: 100%;
-    border: 0.25rem solid #c59d5f;
+    border: 0.25rem solid #0d0d0d;
     border-radius: 0.3rem;
     display: block;
 
@@ -98,5 +98,5 @@ export const ItemTitle = styled.h4 `
 
 export const ItemTitleP = styled.h4 `
     margin-bottom: 0.5rem;
-    color: rgb(235, 127, 94);
+    color: hsl(125, 60%, 30%);
 `;

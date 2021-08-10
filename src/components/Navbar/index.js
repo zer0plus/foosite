@@ -3,25 +3,18 @@ import { FaBars } from 'react-icons/fa'
 import {Nav, NavContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink} from './NavbarElements';
 
 
-const changeTitle = () => {
-    switch (window.location.pathname){
-        case '/register':
-            return '';
-        default:
-            return '';
-    }
-}
+
 const Navbar = ({ toggle }) => {
     return (
     <>
         <Nav>
             <NavContainer>
-                <NavLogo to='/'> foo </NavLogo>
+                <NavLogo to='/'> Foo </NavLogo>
+                {window.location.pathname === '/register' | window.location.pathname === '/login' ? <></> : 
+                <>
                 <MobileIcon onClick={toggle}>
                     <FaBars />
                 </MobileIcon>
-                {window.location.pathname === '/register' ? <></> : 
-                    <>
                     <NavMenu>
                         <NavItem>
                             <NavLinks to="/about"> Our Story </NavLinks>

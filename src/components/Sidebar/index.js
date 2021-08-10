@@ -9,16 +9,16 @@ const Sidebar = ({ isOpen, toggle }) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to="about">
+                    <SidebarLink to="/about">
                         About
                     </SidebarLink>
-                    <SidebarLink to="menu">
+                    <SidebarLink to="/menu">
                         Menu
                     </SidebarLink>
-                    <SidebarLink to="services">
+                    <SidebarLink to="/services">
                         Services
                     </SidebarLink>
-                    <SidebarLink to="register">
+                    <SidebarLink to="/register">
                         Register
                     </SidebarLink>
                 </SidebarMenu>
